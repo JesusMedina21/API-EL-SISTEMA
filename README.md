@@ -9,3 +9,7 @@ pip install django-cors-headers
 pip install coreapi
  python manage.py makemigrations
  python manage.py migrate
+
+para correr el proyecto
+
+python manage.py runserver
