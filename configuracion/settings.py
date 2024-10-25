@@ -37,12 +37,22 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Libreria para permitir usar la api en modo desarrollo 
+    # Debido a que ella funciona por default solo en produccion
+    'corsheaders',
+    # Estas librerias vienen por defecto en DJANGO
     'rest_framework',
+    # Esta es la libreria de la API
     'coreapi',
+    # Esta es la libreria de la documentacion que proporciona la API
     'api'
+    # Esta es la APP que cree por la consola que le puse por nombre API
 ]
 
 MIDDLEWARE = [
+      # Libreria para permitir usar la api en modo desarrollo 
+    # Debido a que ella funciona por default solo en produccion
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -51,6 +61,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+#Aqui indico que permito que cualquier URL acceda a la api
+CORS_ALLOW_ALL_ORIGINS = True
 
 ROOT_URLCONF = 'configuracion.urls'
 
@@ -58,6 +70,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [BASE_DIR / 'templates'],
+        # Aqui indico en donde van a estar los html
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -106,7 +119,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'eS'
+LANGUAGE_CODE = 'es'
 
 TIME_ZONE = 'America/Caracas'
 
