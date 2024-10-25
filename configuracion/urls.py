@@ -27,9 +27,9 @@ from api import views
 #Aqui estoy utilizando la libreria JWT para mas seguridad por Tokens
 
 urlpatterns = [
-    
+    #Estas son mis urls, el name significado como se van a visualizar en el navegador
     path('', views.inicio, name='inicio'),
     path('admin/', admin.site.urls),
-    path('api', include('api.urls'), name='api'),
-    path('docs/', include_docs_urls(title='Api Documentation'),  name='api-docs'),
+    path('api/', include('api.urls'), name='api'),
+    path('docs/', include_docs_urls(title='Documentacion'),  name='api-docs'),
 ]
