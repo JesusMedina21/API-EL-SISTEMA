@@ -1,9 +1,0 @@
-python3 -m venv venv
-source venv/bin/activate
-pip3 install django-jazzmin
-pip3 install djangorestframework
-pip3 install django-cors-headers
-pip3 install coreapi
-pip3 install mysqlclient
-
-pip freeze > requirements.txt
