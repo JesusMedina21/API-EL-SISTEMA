@@ -2,7 +2,7 @@
  Api Informativa sobre los Instrumentos Musicales impartidos en el Sistema Nacional de Orquestas y Coros Infantiles y Juveniles de Venezuela para aprobar la 2da parte del curso Programacion FullStack en la UNET
 
 activar entorno virtual(linux, puede servir en windows)
-source venv/bin/activate
+
 
 Librerias:
  
