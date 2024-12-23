@@ -6,11 +6,16 @@
 Librerias:
  
  pip install django
+ 
 pip install djangorestframework
+
 pip install django-cors-headers
+
 pip install coreapi
- python manage.py makemigrations
- python manage.py migrate
+
+python manage.py makemigrations
+ 
+python manage.py migrate
 
 para correr el proyecto
 
